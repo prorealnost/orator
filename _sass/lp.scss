@@ -1,0 +1,283 @@
+$zoom: 1.44;
+$primarycolor: #7044BD;
+$btn-primary-bg: $primarycolor;
+$font-family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+@import "paper-variables";
+
+@mixin gray-section {
+  background: #FAFAFA;
+  border-top: solid #eee 1px;
+  border-bottom: solid #eee 1px;
+}
+
+.narrow {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.btn-info {
+  background-color: $primarycolor;
+}
+
+.container {
+}
+
+.btn {
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 14px * $zoom;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+  line-height: 16px * $zoom;
+  padding: 10px * $zoom 20px * $zoom;
+}
+
+.btn-lg {
+  padding: 12px 24px;
+  font-size: 18px * $zoom;
+  line-height: 1.33333 * $zoom;
+}
+
+@mixin default-font {
+  font-size: 19px;
+  line-height: 1.7;
+  font-weight: normal;
+}
+
+body {
+  @include default-font;
+}
+
+section {
+  padding: 100px 0;
+
+  h1 {
+    /* Что такое Экспресс-к: */
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    font-size: 52px;
+    color: #353535;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 40px;
+  }
+
+  h2 {
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    font-size: 34px;
+    line-height: 48px;
+    color: #454545;
+  }
+
+  .lead {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 22.5px;
+    font-weight: 400;
+  }
+
+  h1 + .lead {
+    margin-top: -20px;
+  }
+
+  p, td, li {
+    @include default-font;
+  }
+}
+
+#hero {
+  background-image: url('/images/bg-color-paper.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  //padding: 200px 0;
+
+  @media (max-height: 1000px) {
+    min-height: 100vh;
+  }
+  text-align: center;
+  color: white;
+
+  .container {
+    h1 {
+      /* Наполни свою жизнь с: */
+      font-family: $font-family-sans-serif;
+      font-weight: 700;
+      font-size: 36px * $zoom;
+      color: #FFFFFF;
+      line-height: 42px * $zoom;
+    }
+
+    .lead {
+      /* поможем выбрать дело: */
+      font-family: $font-family-sans-serif;
+      font-weight: 300;
+      font-size: 24px * $zoom;
+      color: #FFFFFF;
+      line-height: 28px * $zoom;
+      margin-top: 20px * $zoom;
+      margin-bottom: 50px * $zoom;
+    }
+
+    .btn + .btn {
+      margin-left: 20px;
+    }
+  }
+}
+
+#what {
+  .row {
+    margin-top: 50px;
+
+    img {
+      margin: 25px 0;
+      width: 140px;
+      height: 144px;
+    }
+  }
+}
+
+#numbers {
+  background-image: url('/images/bg-color-paper.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .number {
+    /* 12: */
+    font-family: $font-family-sans-serif;
+    font-weight: 400;
+    font-size: 72px * $zoom;
+    color: #FFFFFF;
+    line-height: 85px * $zoom;
+  }
+  .text {
+    /* лет опыта: */
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    font-size: 18px * $zoom;
+    color: #FFFFFF;
+    line-height: 21px * $zoom;
+  }
+}
+
+#pain {
+  @include gray-section;
+}
+
+#learn {
+  td {
+    vertical-align: center;
+    height: 60px;
+    padding: 0;
+    margin-bottom: 10px;
+
+    font-size: 22.5px;
+  }
+
+  td.img {
+    img {
+      width: 80px;
+      height: 80px;
+      margin: 15px;
+    }
+  }
+
+  td.text {
+    padding-left: 10px;
+  }
+}
+
+.cta {
+  background: $primarycolor;
+  text-align: center;
+
+  .btn-default {
+    color: black;
+  }
+}
+
+#who {
+  img.me {
+    margin-top: 30px;
+  }
+
+  ul {
+    margin-top: 40px;
+  }
+}
+
+#whom {
+  @include gray-section;
+
+  .row {
+    margin-bottom: 30px;  
+    img {
+      width: 61px;
+      height: 61px;
+      margin: 15px;
+    }
+  }
+}
+
+#plan {
+  .row {
+    margin-bottom: 40px;
+    img {
+      margin: 35px 0;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.cta {
+  background: $primarycolor;
+  text-align: center;
+  padding: 50px 0;
+
+  h1 {
+    color: white;
+  }
+}
+
+#effect {
+  @media (max-width: $screen-xs-max) {
+    h2 {
+      margin-top: 10px;
+    }
+  }
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    h2 {
+      margin-top: 70px;
+    }
+  }
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    h2 {
+      margin-top: 130px;
+    }
+  }
+  @media (min-width: $screen-lg-min) {
+    h2 {
+      margin-top: 150px;
+    }
+  }
+  .row + .row {
+    margin-top: 100px;
+  }
+}
+
+#buy {
+  .modal-body {
+    margin-bottom: 20px;
+
+    .payment-option + .payment-option {
+      margin-top: 40px;
+    }
+  }
+}
