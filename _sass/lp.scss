@@ -88,15 +88,27 @@ section {
   }
 }
 
+#header {
+  padding: 24px 0;
+
+  img {
+    width: 180px;
+    height: auto;
+  }
+
+  p {
+    padding-top: 20px;
+  }
+
+  box-shadow: 10px 10px 5px #888888;
+}
+
 #hero {
   background-image: url('/images/bg-color-paper.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   //padding: 200px 0;
 
-  @media (max-height: 1000px) {
-    min-height: 100vh;
-  }
   text-align: center;
   color: white;
 
@@ -279,5 +291,25 @@ section {
     .payment-option + .payment-option {
       margin-top: 40px;
     }
+  }
+}
+
+#footer {
+  background: #000000;
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 14px * $zoom;
+  color: #A7A7A7;
+  letter-spacing: 0.5px;
+  line-height: 16px * $zoom;
+  margin: 0;
+  padding: 20px;
+
+  a {
+    color: #A7A7A7;
+  }
+
+  p {
+    margin: 0;
   }
 }
