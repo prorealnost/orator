@@ -3,7 +3,7 @@ $primarycolor: #7044BD;
 $btn-primary-bg: $primarycolor;
 $font-family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
-@import "paper-variables";
+@import 'bootstrap-variables';
 
 @mixin gray-section {
   background: #FAFAFA;
